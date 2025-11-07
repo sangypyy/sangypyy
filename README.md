@@ -1,4 +1,4 @@
-# ============================================
+**# ============================================
 # 1. NHẬP THƯ VIỆN
 # ============================================
 
@@ -35,14 +35,14 @@ target_col = "TenCotMucTieu"
 
 df = pd.read_csv(file_path)
 
-print("✅ Kích thước dữ liệu:", df.shape)
+print(" Kích thước dữ liệu:", df.shape)
 
-print("✅ Các cột:", df.columns.tolist())
+print(" Các cột:", df.columns.tolist())
 
 display(df.head())
 
 # --- Thống kê mô tả
-print("\n📊 Thống kê mô tả:")
+print("\n Thống kê mô tả:")
 
 display(df.describe())
 
@@ -153,17 +153,17 @@ rec = recall_score(y_test, y_pred, average='weighted', zero_division=0)
 
 f1 = f1_score(y_test, y_pred, average='weighted', zero_division=0)
 
-print("\n🎯 **ĐÁNH GIÁ MÔ HÌNH BAN ĐẦU**")
+print("\n **ĐÁNH GIÁ MÔ HÌNH BAN ĐẦU**")
 
-print(f"✅ Accuracy  : {acc:.3f}")
+print(f" Accuracy  : {acc:.3f}")
 
-print(f"✅ Precision : {prec:.3f}")
+print(f" Precision : {prec:.3f}")
 
-print(f"✅ Recall    : {rec:.3f}")
+print(f" Recall    : {rec:.3f}")
 
-print(f"✅ F1-score  : {f1:.3f}")
+print(f" F1-score  : {f1:.3f}")
 
-print("\n📋 Báo cáo chi tiết:")
+print("\n Báo cáo chi tiết:")
 
 print(classification_report(y_test, y_pred))
 
@@ -209,9 +209,9 @@ grid = GridSearchCV(KNeighborsClassifier(), param_grid, cv=5)
 
 grid.fit(X_train_scaled, y_train)
 
-print("\n🔎 K tối ưu:", grid.best_params_['n_neighbors'])
+print("\n K tối ưu:", grid.best_params_['n_neighbors'])
 
-print(f"✅ Điểm trung bình cross-validation: {grid.best_score_:.3f}")
+print(f" Điểm trung bình cross-validation: {grid.best_score_:.3f}")
 
 # --- Dự đoán với mô hình tốt nhất
 best_model = grid.best_estimator_
@@ -222,9 +222,9 @@ best_acc = accuracy_score(y_test, y_pred_best)
 
 best_f1 = f1_score(y_test, y_pred_best, average='weighted', zero_division=0)
 
-print(f"\n📈 Độ chính xác sau tinh chỉnh: {best_acc:.3f}")
+print(f"\n Độ chính xác sau tinh chỉnh: {best_acc:.3f}")
 
-print(f"📊 F1-score sau tinh chỉnh: {best_f1:.3f}")
+print(f" F1-score sau tinh chỉnh: {best_f1:.3f}")
 
 # --- Biểu đồ độ chính xác theo K
 k_values = range(1, 21)
@@ -262,10 +262,11 @@ plt.show()
 
 if best_acc >= 0.9:
     
-    print("🎉 Kết quả đạt yêu cầu (>= 90%)!")
+    print(" Kết quả đạt yêu cầu (>= 90%)!")
 
 else:
     
-    print("⚠️ Kết quả chưa đạt, cần thử mô hình khác hoặc tinh chỉnh thêm.")
+    print(" Kết quả chưa đạt")
 
-print("\n✅ Bài thực hành hoàn tất!")
+print("\n Hoàn thank")
+**
